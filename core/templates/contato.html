@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content%}
+
+<h1 class="page-header"> Contate - Nós  </h1>
+
+<div class="container">
+    <div class="">
+
+        <div class="form-group">
+            <label  for="id_nome" class=""> Nome: </label>
+            <input id="id_nome" name="nome" type="text" class="form-control" placeholder="Digite seu nome"/>
+        </div>
+
+        <div class="form-group">
+            <label  for="id_assunto" class=""> Assunto: </label>
+            <input id="id_assunto" name="nome" type="text" class="form-control" placeholder="Assunto de desejado "/>
+        </div>
+
+        <div class="form-group">
+            <label for="id_categoria">Categoria</label>
+            <select class="form-control" id="id_categoria">
+                <option>Problema com as compras </option>
+                <option>Problema com Financeiro</option>
+                <option>Problema com a Entrega</option>
+                <option>Reclamação Geral</option>
+                <option>Sugestão</option>
+                <option>Elogio </option>
+            </select>
+        </div>
+
+
+        <div class="form-group">
+            <label  for="id_msg" class=""> Assunto: </label>
+            <textarea id="id_msg" name="nome" class="form-control" rows="5">
+
+             </textarea>
+        </div>
+
+            <button class="btn btn-block btn-primary"> Enviar Formulario de Contato</button>
+
+    </div>
+</div>
+
+
+{% endblock %}
