@@ -72,9 +72,10 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-DATABASES_URL = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+default_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-    'default':{config('DATABASES_URL',default=dburl ,cast=dburl) }
+    'default': config('DATABASE_URL', default=default_url, cast=dburl),
+
 }
 
 # Password validation
